@@ -1,0 +1,46 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.kanban-column {
+  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+
+  &__header {
+    padding: vars.$spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &__content {
+    flex: 1;
+    transition: background-color 0.2s ease;
+
+    &--dragging-over {
+      background-color: rgba(25, 118, 210, 0.08) !important;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+
+      &:hover {
+        background: #999;
+      }
+    }
+  }
+}

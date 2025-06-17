@@ -1,0 +1,121 @@
+import { WidgetTemplate } from '@/types/widgets';
+
+export const widgetTemplates: WidgetTemplate[] = [
+  {
+    id: 'weather-template',
+    type: 'weather',
+    name: 'Weather',
+    description: 'Current weather and forecast',
+    icon: 'WbSunny',
+    category: 'Information',
+    defaultSize: { width: 2, height: 2 },
+    defaultConfig: {
+      location: 'New York',
+      units: 'celsius',
+      showForecast: true,
+    },
+  },
+  {
+    id: 'news-template',
+    type: 'news',
+    name: 'News Feed',
+    description: 'Latest news articles',
+    icon: 'Article',
+    category: 'Information',
+    defaultSize: { width: 3, height: 4 },
+    defaultConfig: {
+      category: 'general',
+      sources: [],
+      maxItems: 10,
+    },
+  },
+  {
+    id: 'calculator-template',
+    type: 'calculator',
+    name: 'Calculator',
+    description: 'Basic and scientific calculator',
+    icon: 'Calculate',
+    category: 'Tools',
+    defaultSize: { width: 2, height: 3 },
+    defaultConfig: {
+      theme: 'light',
+      scientific: false,
+    },
+  },
+  {
+    id: 'clock-template',
+    type: 'clock',
+    name: 'Clock',
+    description: 'Digital clock with timezone support',
+    icon: 'AccessTime',
+    category: 'Information',
+    defaultSize: { width: 2, height: 1 },
+    defaultConfig: {
+      timezone: 'America/New_York',
+      format: '12h',
+      showDate: true,
+      showSeconds: false,
+    },
+  },
+  {
+    id: 'todo-template',
+    type: 'todo',
+    name: 'Todo List',
+    description: 'Simple task management',
+    icon: 'CheckCircle',
+    category: 'Productivity',
+    defaultSize: { width: 2, height: 3 },
+    defaultConfig: {
+      maxItems: 10,
+      showCompleted: false,
+    },
+  },
+  {
+    id: 'calendar-template',
+    type: 'calendar',
+    name: 'Calendar',
+    description: 'Monthly calendar view',
+    icon: 'CalendarToday',
+    category: 'Productivity',
+    defaultSize: { width: 4, height: 3 },
+    defaultConfig: {
+      view: 'month',
+      showWeekends: true,
+    },
+  },
+  {
+    id: 'notes-template',
+    type: 'notes',
+    name: 'Sticky Notes',
+    description: 'Quick notes and reminders',
+    icon: 'StickyNote2',
+    category: 'Productivity',
+    defaultSize: { width: 2, height: 2 },
+    defaultConfig: {
+      backgroundColor: '#fff59d',
+      fontSize: 14,
+    },
+  },
+  {
+    id: 'chart-template',
+    type: 'chart',
+    name: 'Chart',
+    description: 'Data visualization charts',
+    icon: 'BarChart',
+    category: 'Analytics',
+    defaultSize: { width: 3, height: 2 },
+    defaultConfig: {
+      chartType: 'line',
+      dataSource: '',
+      refreshInterval: 60,
+    },
+  },
+];
+
+export const widgetCategories = [
+  'All',
+  'Information',
+  'Tools',
+  'Productivity',
+  'Analytics',
+];

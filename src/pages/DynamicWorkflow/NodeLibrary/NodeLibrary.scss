@@ -1,0 +1,24 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.node-library {
+  height: 100%;
+
+  &__item {
+    padding: vars.$spacing-xs 0;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
+
+    .MuiPaper-root {
+      transition: all 0.2s ease;
+
+      &:hover {
+        @include mixins.card-shadow(2);
+        transform: translateY(-1px);
+      }
+    }
+  }
+}

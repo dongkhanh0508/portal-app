@@ -1,0 +1,38 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins' as mixins;
+
+.workflow-page {
+  &__canvas {
+    height: 400px;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: vars.$primary-color;
+    }
+  }
+
+  &__node-library {
+    @include mixins.card-shadow(1);
+    border-radius: 8px;
+
+    .node-item {
+      padding: vars.$spacing-sm;
+      margin-bottom: vars.$spacing-sm;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: vars.$primary-color;
+        background-color: rgba(vars.$primary-color, 0.04);
+      }
+    }
+  }
+}

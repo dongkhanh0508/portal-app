@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins' as mixins;
+
+.task-card {
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    @include mixins.card-shadow(2);
+    transform: translateY(-1px);
+  }
+
+  &--dragging {
+    @include mixins.card-shadow(4);
+    border-left-color: vars.$primary-color;
+  }
+
+  .MuiCardContent-root {
+    position: relative;
+  }
+}

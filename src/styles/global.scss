@@ -1,0 +1,93 @@
+@use './variables' as vars;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  padding: vars.$spacing-lg;
+
+  @media (max-width: vars.$breakpoint-sm) {
+    padding: vars.$spacing-md;
+  }
+}
+
+.card-container {
+  margin-bottom: vars.$spacing-lg;
+}
+
+// Utility classes
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: vars.$spacing-xs; }
+.mb-2 { margin-bottom: vars.$spacing-sm; }
+.mb-3 { margin-bottom: vars.$spacing-md; }
+.mb-4 { margin-bottom: vars.$spacing-lg; }
+.mb-5 { margin-bottom: vars.$spacing-xl; }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: vars.$spacing-xs; }
+.mt-2 { margin-top: vars.$spacing-sm; }
+.mt-3 { margin-top: vars.$spacing-md; }
+.mt-4 { margin-top: vars.$spacing-lg; }
+.mt-5 { margin-top: vars.$spacing-xl; }
+
+.p-0 { padding: 0; }
+.p-1 { padding: vars.$spacing-xs; }
+.p-2 { padding: vars.$spacing-sm; }
+.p-3 { padding: vars.$spacing-md; }
+.p-4 { padding: vars.$spacing-lg; }
+.p-5 { padding: vars.$spacing-xl; }
+
+// Flexbox utilities
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}

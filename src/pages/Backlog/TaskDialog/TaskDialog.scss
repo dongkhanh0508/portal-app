@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as vars;
+
+.task-dialog {
+  .MuiDialog-paper {
+    min-height: 600px;
+  }
+
+  .MuiDialogContent-root {
+    padding: vars.$spacing-lg;
+  }
+
+  .MuiDialogTitle-root {
+    padding: vars.$spacing-md vars.$spacing-lg;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .MuiDialogActions-root {
+    padding: vars.$spacing-md vars.$spacing-lg;
+    border-top: 1px solid #e0e0e0;
+  }
+}
