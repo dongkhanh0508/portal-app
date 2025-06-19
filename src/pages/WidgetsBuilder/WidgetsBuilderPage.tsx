@@ -421,7 +421,7 @@ const WidgetsBuilderPage: React.FC = () => {
         </Box>
 
         {/* Main Content */}
-        <Box display="flex" height="calc(100vh - 80px)">
+        <Box display="flex" height="calc(100vh - 160px)">
           {/* Sidebar */}
           <Drawer
             variant={isMobile ? 'temporary' : 'persistent'}
